@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Task Manager</h1>
+    </header>
+
+    <section class="task-form">
+      <input
+        type="text"
+        id="taskText"
+        placeholder="What do you need to do?"
+        aria-label="Task description"
+      />
+
+      <div class="time-input-group">
+        <input
+          type="number"
+          id="taskTimeValue"
+          min="1"
+          placeholder="Enter time"
+          aria-label="Task time value"
+        />
+        <select id="taskTimeUnit" aria-label="Task time unit">
+          <option value="minutes">Minutes</option>
+          <option value="hours">Hours</option>
+          <option value="days">Days</option>
+        </select>
+      </div>
+
+      <button onclick="addTask()">Add Task</button>
+    </section>
+
+    <ul id="taskList" class="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
